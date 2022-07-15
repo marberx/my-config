@@ -28,7 +28,7 @@ screens = [
                                 background="#2f343f",
                                 disable_drag=True),
                 widget.TextBox(
-                       text = '',
+                       text = '',
                        padding = 0,
                        fontsize = 28,
                        foreground='#2f343f'
