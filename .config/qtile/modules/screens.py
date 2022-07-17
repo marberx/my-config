@@ -18,11 +18,11 @@ screens = [
                         'Button1':
                         lambda: qtile.cmd_spawn('rofi -show drun')
                         }),
-                widget.Sep(padding=4, linewidth=0, background="#2f343f"), 
+                    widget.Sep(padding=0, linewidth=0, background="#2f343f"), 
                 widget.GroupBox(
-                                highlight_method='line',
-                                this_screen_border="#5294e2",
-                                this_current_screen_border="#5294e2",
+                                highlight_method='block',
+                                this_screen_border="#fb0067",
+                                this_current_screen_border="#fb0067",
                                 active="#ffffff",
                                 inactive="#848e96",
                                 background="#2f343f",
@@ -30,19 +30,16 @@ screens = [
                 widget.TextBox(
                        text = '',
                        padding = 0,
-                       fontsize = 28,
+                       fontsize = 30, 
                        foreground='#2f343f'
                        ),    
                 widget.Prompt(),
-                widget.Spacer(length=5),
-                widget.WindowName(foreground='#99c0de',fmt='{}'),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.CurrentLayoutIcon(scale=0.75),
+                widget.Spacer(length=50),
+                widget.CurrentLayoutIcon(
+                    custom_icon_paths=[os.path.expanduser("~/.config/qtile/icons")],
+                    scale=0.75,
+                    foreground="#fb0067"
+                    ),
                 widget.CheckUpdates(
                     update_interval=1800,
                     distro="Arch_yay",

@@ -17,7 +17,7 @@ keys = [
 
     Key([mod], "r", lazy.spawn("rofi -show run"), desc="spawn rofi"),
     Key([mod],"a", lazy.spawn("rofi -show drun"), desc = "spawn rofi drun"),
-
+    Key([mod],"f", lazy.spawn("firefox")),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"],
